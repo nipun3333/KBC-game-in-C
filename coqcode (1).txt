@@ -1,0 +1,39 @@
+void changeofthequestion(){
+int qn;
+srand(time(NULL));
+qn = (rand()%8);
+char answer;
+if(qn%4==0)
+answer= 'A';
+else if(qn%4==1)
+answer= 'B';
+else if(qn%4==2)
+answer= 'C';
+else if(qn%4==3)
+answer= 'D';
+int count = 0;
+int startline =0;
+startline = qn*5 ;
+int endline = 0;
+endline = startline+5;
+char ch[256];
+system("cls");
+while(NULL!= fgets(ch,sizeof ch,question)){
+if(count==startline){
+fputs(ch,stdout);
+startline++;
+count++;
+}
+else count++;
+if(startline == endline){
+	 break;
+}}
+fclose(question);
+goto choiceOption;
+}
+/*
+add 'or ' in option = anslevel thing to give the answer forthis too
+*/
+
+
+
